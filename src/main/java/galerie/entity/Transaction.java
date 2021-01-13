@@ -33,4 +33,7 @@ public class Transaction {
     
     @ManyToOne
     private Personne personne;
+    
+    @OneToOne
+    private Tableau oeuvre;
 }

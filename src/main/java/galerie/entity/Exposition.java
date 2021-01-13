@@ -5,6 +5,7 @@
  */
 package galerie.entity;
 import java.time.LocalDate;
+import java.util.LinkedList;
 import java.util.List;
 import javax.persistence.*;
 import lombok.*;
@@ -35,6 +36,16 @@ public class Exposition {
     
     @OneToMany (mappedBy = "exposition")
     public List<Transaction> transactions;
+    
+    
+    @ManyToMany
+    @JoinTable(name="expo_tableau",
+            joinColumns =
+                    @JoinColumn(name = "exposition_id", referencedColumnName="id"),
+            inverseJoinColumns =
+                    @JoinColumn(name = "tableau_id",referencedColumnName="id")
+        )
+        List<Tableau> oeuvres = new LinkedList<>();
 
     
 }
