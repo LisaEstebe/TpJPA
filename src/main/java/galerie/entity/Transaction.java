@@ -28,4 +28,9 @@ public class Transaction {
     @NonNull
     private float prixVente;
     
+    @ManyToOne
+    private Exposition exposition;
+    
+    @ManyToOne
+    private Personne personne;
 }

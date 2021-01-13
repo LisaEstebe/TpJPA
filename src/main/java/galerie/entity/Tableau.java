@@ -33,4 +33,7 @@ public class Tableau {
     @Column(unique=true)
     @NonNull
     private int hauteur;
+    
+    @ManyToOne
+    private Artiste artiste;
 }

@@ -5,6 +5,7 @@
  */
 package galerie.entity;
 
+import java.util.List;
 import javax.persistence.*;
 import lombok.*;
 
@@ -25,4 +26,7 @@ public class Personne {
      @Column(unique=true)
     @NonNull
     private String adresse;
+     
+     @OneToMany (mappedBy = "personne")
+    public List<Transaction> transactions;
 }

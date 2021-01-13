@@ -5,6 +5,7 @@
  */
 package galerie.entity;
 import java.time.LocalDate;
+import java.util.List;
 import javax.persistence.*;
 import lombok.*;
 /**
@@ -28,4 +29,12 @@ public class Exposition {
     @Column(unique=true)
     @NonNull
     private int duree;
+    
+    @ManyToOne
+    private Galerie galerie;
+    
+    @OneToMany (mappedBy = "exposition")
+    public List<Transaction> transactions;
+
+    
 }

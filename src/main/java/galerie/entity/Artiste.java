@@ -5,6 +5,7 @@
  */
 package galerie.entity;
 
+import java.util.List;
 import javax.persistence.*;
 import lombok.*;
 
@@ -21,4 +22,7 @@ public class Artiste {
      @Column(unique=true)
     @NonNull
     private String biographie;
+     
+    @OneToMany(mappedBy = "artiste")
+    public List<Tableau> tableaux;
 }
