@@ -1,2 +1,25 @@
 -- Initialisation spécifiques pour un jeu de test
 INSERT INTO Galerie(id, nom, adresse) VALUES (1, 'Saatchi', 'King\''s Road, Londres');
+INSERT INTO Galerie(id, nom, adresse) VALUES (2, 'Louvre', 'Paris');
+INSERT INTO Galerie(id, nom, adresse) VALUES (3, 'National Portrait Gallery', 'London');
+INSERT INTO Galerie(id, nom, adresse) VALUES (4, 'Museu Salvador Dalì', 'Figueras');
+INSERT INTO Galerie(id, nom, adresse) VALUES (5,'Národní muzeum','Praha');
+INSERT INTO Personne(id, nom, adresse) VALUES (1, 'Vincent Van Ghog', 'Pays-Bas');
+INSERT INTO Personne(id, nom, adresse) VALUES (2, 'Frida Kahlo', 'Mexico');
+INSERT INTO Personne(id, nom, adresse) VALUES (3,'Henri Matisse', 'France');
+INSERT INTO Personne(id, nom, adresse) VALUES (4, 'Andy Warhol', 'USA');
+INSERT INTO Personne(id, nom, adresse) VALUES (5, 'Alfred Sisley', 'France');
+INSERT INTO Personne(id, nom, adresse) VALUES (6, 'Client1', 'Castres');
+INSERT INTO Personne(id, nom, adresse) VALUES (7, 'Client2', 'Foix');
+INSERT INTO Artiste (id, biographie) VALUES (1,'Hallo');
+INSERT INTO Artiste (id, biographie) VALUES (2,'Hola');
+INSERT INTO Artiste (id, biographie) VALUES (3,'Bonjour');
+INSERT INTO Artiste (id, biographie) VALUES (4,'Hello');
+INSERT INTO Artiste (id, biographie) VALUES (5,'Bonjour');
+INSERT INTO Exposition (id, debut, intitule, duree, galerie) VALUES (1, LocalDate.of(2021, 01, 28),'JR: Chronicles');
+INSERT INTO Exposition (id, debut, intitule, duree, galerie) VALUES (2, LocalDate.of(2022,02,07),'Pharaon des Deux Terres');
+INSERT INTO Exposition (id, debut, intitule, duree, galerie) VALUES (3, LocalDate.of(2020,08,31),'Sluneční králové');
+INSERT INTO Tableau (id, titre, support, largeur, hauteur, artiste) VALUES (1, 'Two Crabs', 'huile sur toile',38,47,1);
+INSERT INTO Tableau (id, titre, support, largeur, hauteur, artiste) VALUES (2, 'Las Dos Fridas', 'huile sur toile',175,176,2);
+INSERT INTO Transaction (id, venduLe, prixVente, exposition, personne, oeuvre) VALUES (1, LocalDate.of(2021,01,15), 10 000, 1, 6, 1);
+INSERT INTO Transaction (id, venduLe, prixVente, exposition, personne, oeuvre) VALUES (2, LocalDate.of(2021,01,15), 10 000, 2, 7, 2);
