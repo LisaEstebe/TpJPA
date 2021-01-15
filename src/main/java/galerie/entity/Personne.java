@@ -13,7 +13,9 @@ import lombok.*;
  *
  * @author Lisa
  */
-@Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
+@Getter @Setter @NoArgsConstructor @RequiredArgsConstructor 
+@ToString(callSuper = true )
+@Inheritance(strategy = InheritanceType.JOINED)
 @Entity // Une entité JPA
 public class Personne {
     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
@@ -23,10 +25,24 @@ public class Personne {
     @NonNull
     private String nom;
     
-     @Column(unique=true)
-    @NonNull
+    @Column(unique=true)
     private String adresse;
+    
+    public Personne (String nom, String adresse){
+        this.nom = nom;
+        this.adresse = adresse;
+    }
      
      @OneToMany (mappedBy = "personne")
     public List<Transaction> transactions;
+     
+    public float BudgetArt(int annee){
+        float budget = 0;
+        for (Transaction t : transactions){
+            if(t.getVenduLe().getYear() == annee){
+                budget += t.getPrixVente();
+            }
+        }
+        return budget;
+    }
 }

@@ -23,4 +23,16 @@ public class Galerie {
     // TODO : Mettre en oeuvre la relation oneToMany vers Exposition
     @OneToMany(mappedBy = "galerie")
     public List<Exposition> expositions;
+    
+    public float CAannuel(int annee){
+        float total = 0;
+        
+        for (Exposition e : expositions){
+            if (e.getDebut().getYear() == annee && (e.getDebut().getDayOfYear()+e.getDuree())<365) {
+            total += e.CA();
+         }
+        }
+        return total;
+    }
+    
 }

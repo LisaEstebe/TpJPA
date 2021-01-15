@@ -36,6 +36,7 @@ public class Tableau {
     @NonNull
     private int hauteur;
     
+   
     @ManyToOne
     private Artiste artiste;
     

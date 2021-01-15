@@ -35,7 +35,7 @@ public class Exposition {
     private Galerie galerie;
     
     @OneToMany (mappedBy = "exposition")
-    public List<Transaction> transactions;
+    private List<Transaction> transactions;
     
     
     @ManyToMany
@@ -46,6 +46,14 @@ public class Exposition {
                     @JoinColumn(name = "tableau_id",referencedColumnName="id")
         )
         List<Tableau> oeuvres = new LinkedList<>();
+    
+    public float CA(){
+        float total = 0;
+        for (Transaction t : transactions){
+            total += t.getPrixVente();
+        }
+        return total;
+    }
 
     
 }

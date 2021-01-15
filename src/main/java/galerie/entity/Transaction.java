@@ -25,7 +25,6 @@ public class Transaction {
     private LocalDate venduLe;
     
     @Column(unique=true)
-    @NonNull
     private float prixVente;
     
     @ManyToOne

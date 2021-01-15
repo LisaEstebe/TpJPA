@@ -15,13 +15,18 @@ import lombok.*;
  */
 @Getter @Setter @NoArgsConstructor @RequiredArgsConstructor @ToString
 @Entity // Une entité JPA
-public class Artiste {
-     @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
+public class Artiste extends Personne{
+    @Id  @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Integer id;
      
-     @Column(unique=true)
+    @Column(unique=true)
     @NonNull
     private String biographie;
+    
+    public Artiste (String nom, String adresse, String biographie){
+        super (nom, adresse);
+        this.biographie = biographie;
+    }
      
     @OneToMany(mappedBy = "artiste")
     public List<Tableau> tableaux;
