@@ -34,9 +34,9 @@ public class PersonneRepositoryTest {
             
     public void onSaitCompterLesEnregistrements(){
         log.info("On compte les enregistrements de la table 'Personne'");
-        int combienDansLeJeuDeTest = 1; 
+        int combienDansLeJeuDeTest = 7; 
         long nombre = personneDAO.count();
-        assertEquals(combienDansLeJeuDeTest, nombre, "On doit trouver 1 personne" );
+        assertEquals(combienDansLeJeuDeTest, nombre, "On doit trouver 7 personnes" );
     }
     
 }

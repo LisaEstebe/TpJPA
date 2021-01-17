@@ -32,8 +32,8 @@ public class ExpositionRepositoryTest {
     @Sql("test-data.sql")//On peut charger les données spécifiques pour un test
     public void onSaitCompterLesEnregistrements(){
         log.info("On compte les enregistrements de la table 'Exposition'");
-        int combienDansLeJeuDeTest = 1; 
+        int combienDansLeJeuDeTest = 3; 
         long nombre = expositionDAO.count();
-        assertEquals(combienDansLeJeuDeTest, nombre, "On doit trouver 1 exposition" );
+        assertEquals(combienDansLeJeuDeTest, nombre, "On doit trouver 3 expositions" );
     }
 }
