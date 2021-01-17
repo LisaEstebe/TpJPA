@@ -2,8 +2,8 @@
 INSERT INTO Galerie(id, nom, adresse) VALUES (1, 'Saatchi', 'King\''s Road, Londres');
 INSERT INTO Galerie(id, nom, adresse) VALUES (2, 'Louvre', 'Paris');
 INSERT INTO Galerie(id, nom, adresse) VALUES (3, 'National Portrait Gallery', 'London');
-INSERT INTO Galerie(id, nom, adresse) VALUES (4, 'Museu Salvador Dalì', 'Figueras');
-INSERT INTO Galerie(id, nom, adresse) VALUES (5,'Národní muzeum','Praha');
+INSERT INTO Galerie(id, nom, adresse) VALUES (4, 'Museu Salvador Dali', 'Figueras');
+INSERT INTO Galerie(id, nom, adresse) VALUES (5,'Narodni muzeum','Praha');
 INSERT INTO Personne(id, nom, adresse) VALUES (1, 'Vincent Van Ghog', 'Pays-Bas');
 INSERT INTO Personne(id, nom, adresse) VALUES (2, 'Frida Kahlo', 'Mexico');
 INSERT INTO Personne(id, nom, adresse) VALUES (3,'Henri Matisse', 'France');
