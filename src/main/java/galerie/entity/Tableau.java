@@ -45,4 +45,13 @@ public class Tableau {
     
     @ManyToMany(mappedBy = "oeuvres")
     List<Exposition> accrochages = new LinkedList<>();
+    
+    public Tableau(int id, String titre, String support, int largeur, int hauteur, Artiste artiste){
+        this.artiste=artiste;
+        this.hauteur=hauteur;
+        this.id=id;
+        this.largeur=largeur;
+        this.support=support;
+        this.titre=titre;
+    }
 }

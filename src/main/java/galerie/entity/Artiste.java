@@ -23,8 +23,8 @@ public class Artiste extends Personne{
     @NonNull
     private String biographie;
     
-    public Artiste (String nom, String adresse, String biographie){
-        super (nom, adresse);
+    public Artiste (int id, String nom, String adresse, String biographie){
+        super (id, nom, adresse);
         this.biographie = biographie;
     }
      

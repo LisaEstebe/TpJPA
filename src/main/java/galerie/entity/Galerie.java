@@ -23,6 +23,7 @@ public class Galerie {
     // TODO : Mettre en oeuvre la relation oneToMany vers Exposition
     @OneToMany(mappedBy = "galerie")
     public List<Exposition> expositions;
+
     
     public float CAannuel(int annee){
         float total = 0;
@@ -35,4 +36,13 @@ public class Galerie {
         return total;
     }
     
+    public Galerie(int id, String nom, String adresse){
+        this.id=id;
+        this.adresse=adresse;
+        this.nom=nom;
+    }
+    
+    public void nouvelleExpo (Exposition e){
+        this.expositions.add(e);
+    }
 }

@@ -35,4 +35,15 @@ public class Transaction {
     
     @OneToOne
     private Tableau oeuvre;
+    
+    public Transaction(int id, LocalDate vendule, float prixVente, Exposition expo, Personne personne, Tableau oeuvre){
+        this.id=id;
+        this.exposition=expo;
+        this.oeuvre=oeuvre;
+        this.prixVente=prixVente;
+        this.venduLe=venduLe;
+        this.personne=personne;
+    }
+    
+   
 }

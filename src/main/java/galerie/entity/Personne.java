@@ -28,9 +28,10 @@ public class Personne {
     @Column(unique=true)
     private String adresse;
     
-    public Personne (String nom, String adresse){
+    public Personne (int id, String nom, String adresse){
         this.nom = nom;
         this.adresse = adresse;
+        this.id=id;
     }
      
      @OneToMany (mappedBy = "personne")
@@ -44,5 +45,9 @@ public class Personne {
             }
         }
         return budget;
+    }
+    
+    public void nouvelAchat(Transaction t){
+        this.transactions.add(t);
     }
 }

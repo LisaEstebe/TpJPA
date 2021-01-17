@@ -54,6 +54,19 @@ public class Exposition {
         }
         return total;
     }
+    
+    public Exposition(int id, LocalDate debut, String intitule, int duree, Galerie galerie){
+        this.id=id;
+        this.debut=debut;
+        this.galerie=galerie;
+        this.intitule=intitule;
+        this.duree=duree;
+        
+    }
+    
+    public void nouvelleVente(Transaction t){
+         this.transactions.add(t);
+    }
 
     
 }
